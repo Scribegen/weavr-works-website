@@ -12,3 +12,6 @@ Thumbs.db
 
 # Any random scripts
 extract-frames.js
+
+# Local Netlify folder
+.netlify
