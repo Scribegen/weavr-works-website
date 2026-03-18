@@ -1,0 +1,14 @@
+# Node
+node_modules/
+package-lock.json
+package.json
+
+# Build/extracted files (these should be generated or hosted elsewhere, but we'll include frames for Netlify)
+# Actually, since Netlify needs the frames and video to build the static site, we SHOULD include them.
+# We will only ignore node_modules from the ffmpeg extraction script.
+
+.DS_Store
+Thumbs.db
+
+# Any random scripts
+extract-frames.js
