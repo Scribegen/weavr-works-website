@@ -49,9 +49,16 @@
       document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
     });
 
-    // Close on link click
+    // Close on link click (unless it's the services toggle)
     mobileMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        if (link.id === 'mobile-services-toggle') {
+          e.preventDefault();
+          link.classList.toggle('active');
+          const dropdown = document.getElementById('mobile-services-dropdown');
+          if (dropdown) dropdown.classList.toggle('active');
+          return;
+        }
         hamburger.classList.remove('active');
         mobileMenu.classList.remove('active');
         document.body.style.overflow = '';
