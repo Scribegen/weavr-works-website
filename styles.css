@@ -1106,13 +1106,13 @@ section {
 
 
 @media (min-width: 768px) {
-  .service-card-inner.flex-column {
+  .why-right .service-card-inner.flex-column {
     display: grid;
     grid-template-columns: 80px 1fr;
     gap: 3rem;
     align-items: start;
   }
-  .service-card-footer {
+  .why-right .service-card-footer {
     grid-column: 2 / -1;
     margin-top: 1rem;
     padding-top: 2rem;
