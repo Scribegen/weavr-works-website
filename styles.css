@@ -652,13 +652,14 @@ section {
   border-color: rgba(16, 185, 129, 0.3);
 }
 .pricing-card-inner {
-  background: var(--bg-card-inner);
-  border-radius: var(--radius-inner);
-  padding: 2.5rem 2rem;
   height: 100%;
+  padding: 3rem;
+  background: var(--bg-card-inner);
+  border-radius: calc(var(--radius-xl) - 4px);
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  position: relative;
   overflow: hidden;
   box-shadow: inset 0 1px 1px rgba(255,255,255,0.04);
 }
@@ -722,13 +723,19 @@ section {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  position: relative; /* Added for absolute positioning of ::before */
+  padding-left: 1.25rem; /* Added to make space for the checkmark */
 }
 .pricing-features li::before {
-  content: '';
-  display: inline-block;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+.pricing-card .btn-primary,
+.pricing-card .btn-secondary {
+  margin-top: auto;
 }
 
 /* ══════════════════════════════════════════════════
