@@ -582,6 +582,23 @@ section {
   max-width: 40ch;
   position: sticky;
   top: 13rem;
+  margin-bottom: 2rem;
+}
+.why-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-hairline);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+  position: sticky;
+  top: 18rem;
+  opacity: 0.95;
+  transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+}
+.why-image:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  border-color: var(--border-accent);
 }
 .why-right {
   display: flex;
@@ -889,23 +906,23 @@ section {
   justify-content: center;
 }
 .scroll-seq-sticky img {
-  width: 90%;
-  max-width: 1200px;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  position: relative;
-  z-index: 0;
-  /* Seamless fade into background */
-  -webkit-mask-image: radial-gradient(ellipse 85% 85% at center, black 40%, transparent 95%);
-  mask-image: radial-gradient(ellipse 85% 85% at center, black 40%, transparent 95%);
+  object-position: center center;
 }
 .scroll-seq-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  /* Just a subtle overall dim so text is super readable, no hard edge gradients needed */
-  background: rgba(5, 5, 5, 0.3);
+  background:
+    linear-gradient(to bottom, var(--bg-primary) 0%, transparent 12%),
+    linear-gradient(to top,    var(--bg-primary) 0%, transparent 15%),
+    linear-gradient(to right,  var(--bg-primary) 0%, transparent 10%),
+    linear-gradient(to left,   var(--bg-primary) 0%, transparent 10%),
+    radial-gradient(ellipse at center, transparent 40%, var(--bg-primary) 78%);
   pointer-events: none;
 }
 /* Text panels — no box, shadow-based readability */
