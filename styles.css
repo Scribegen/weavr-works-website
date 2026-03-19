@@ -489,8 +489,10 @@ section {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Double-Bezel Card Architecture */
@@ -527,11 +529,11 @@ section {
 }
 
 /* Bento spans: asymmetric grid */
-.service-card:nth-child(1) { grid-column: span 7; }
-.service-card:nth-child(2) { grid-column: span 5; }
-.service-card:nth-child(3) { grid-column: span 5; }
-.service-card:nth-child(4) { grid-column: span 3; }
-.service-card:nth-child(5) { grid-column: span 4; }
+
+
+
+
+
 
 .service-icon {
   width: 48px; height: 48px;
@@ -1100,4 +1102,20 @@ section {
   .hero h1 { font-size: 2.2rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-brand { grid-column: span 1; }
+}
+
+
+@media (min-width: 768px) {
+  .service-card-inner.flex-column {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-card-footer {
+    grid-column: 2 / -1;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-hairline);
+  }
 }
