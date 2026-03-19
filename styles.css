@@ -490,7 +490,7 @@ section {
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.25rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -512,7 +512,7 @@ section {
   /* Inner core */
   background: var(--bg-card-inner);
   border-radius: var(--radius-inner);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(1.2rem, 2vw, 1.8rem);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1109,7 +1109,7 @@ section {
   .why-right .service-card-inner.flex-column {
     display: grid;
     grid-template-columns: 80px 1fr;
-    gap: 3rem;
+    gap: 1.5rem;
     align-items: start;
   }
   .why-right .service-card-footer {
