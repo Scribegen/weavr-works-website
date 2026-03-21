@@ -3,9 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weavr Works AI — Agentic AI Consulting & Implementation</title>
-  <meta name="description" content="Weavr Works AI builds and deploys autonomous AI agents — receptionists, SDRs, marketers, and custom workflow agents — backed by in-depth AI audit reports." />
+  <title>Custom Inquiries — Weavr Works AI</title>
+  <meta name="description" content="Reach out to Weavr Works AI for custom agent development, legacy system integrations, or general support." />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Premium Form Styling */
+    .form-group {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.02em;
+    }
+    .form-control {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-hairline);
+      color: var(--text-primary);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-lg);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(16, 185, 129, 0.05);
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    }
+    .form-control::placeholder {
+      color: var(--text-muted);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 150px;
+    }
+    .contact-card {
+      background: var(--bg-card-outer);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
 
@@ -65,63 +111,74 @@
     </a>
   </div>
 
-
   <main style="padding-top: 6rem; min-height: 100vh;">
-  <section class="container" style="padding-top: 4rem; padding-bottom: 6rem;">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: 4rem;">
-        <span class="eyebrow reveal">Get in Touch</span>
-        <h1 class="reveal" data-delay="1" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem;">
-          Let's build your<br/>autonomous workforce.
-        </h1>
-        <p class="reveal" data-delay="2" style="font-size: 1.1rem; color: var(--text-secondary); max-width: 50ch; margin: 0 auto; line-height: 1.7;">
-          Ready to eliminate bottlenecks and scale without headcount? Drop us a message and our integration team will reach out to schedule your discovery call.
-        </p>
-      </div>
+    <section class="container" style="padding-top: 5rem; padding-bottom: 5rem; text-align: center;">
+      <span class="eyebrow reveal">Message Our Team</span>
+      <h1 class="reveal" data-delay="1" style="font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem;">
+        Custom Inquiries <span class="accent">&</span> Support
+      </h1>
+      <p class="reveal" data-delay="2" style="font-size: 1.15rem; color: var(--text-secondary); max-width: 65ch; margin: 0 auto 3rem auto; line-height: 1.7;">
+        Have a highly specific operational bottleneck you need solved? Not ready to book a full discovery call but want to know if we can integrate with your legacy software? Send us a detailed dispatch and our engineering leads will review it personally.
+      </p>
 
-      <div class="reveal" data-delay="3" style="background: var(--bg-card-outer); border: 1px solid var(--border-hairline); border-radius: var(--radius-xl); padding: 3px;">
-        <div style="background: var(--bg-card-inner); border-radius: var(--radius-inner); padding: clamp(2rem, 5vw, 4rem); position: relative; overflow: hidden; box-shadow: inset 0 1px 1px rgba(255,255,255,0.04);">
-          <form style="display: flex; flex-direction: column; gap: 1.5rem;" action="https://formsubmit.co/steven@weavrworks.com" method="POST">
-            <!-- FormSubmit Configurations -->
-            <input type="hidden" name="_subject" value="New Contact Form Submission - Weavr Works AI">
-            <input type="hidden" name="_captcha" value="false">
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label for="name" style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Full Name</label>
-                <input type="text" id="name" name="name" required style="width: 100%; padding: 1rem 1.25rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border-hairline); border-radius: 8px; color: var(--text-primary); font-family: var(--font-body); outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-hairline)'">
+      <div class="reveal" data-delay="3" style="max-width: 700px; margin: 0 auto;">
+        <div class="contact-card">
+          <form onsubmit="event.preventDefault(); alert('Form submission functionality is currently disabled in this frontend preview.');">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-control" placeholder="John" required />
               </div>
-              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label for="email" style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Work Email</label>
-                <input type="email" id="email" name="email" required style="width: 100%; padding: 1rem 1.25rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border-hairline); border-radius: 8px; color: var(--text-primary); font-family: var(--font-body); outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-hairline)'">
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control" placeholder="Doe" required />
               </div>
             </div>
-            
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <label for="company" style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Company Website</label>
-              <input type="text" id="company" name="company" style="width: 100%; padding: 1rem 1.25rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border-hairline); border-radius: 8px; color: var(--text-primary); font-family: var(--font-body); outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-hairline)'">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div class="form-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" class="form-control" placeholder="john@yourcompany.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" placeholder="(555) 123-4567" required />
+              </div>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <label for="message" style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">How can we help?</label>
-              <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 1rem 1.25rem; background: rgba(0,0,0,0.2); border: 1px solid var(--border-hairline); border-radius: 8px; color: var(--text-primary); font-family: var(--font-body); outline: none; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-hairline)'"></textarea>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" class="form-control" placeholder="Acme Services Inc." />
+              </div>
+              <div class="form-group">
+                <label for="industry">Industry</label>
+                <input type="text" id="industry" class="form-control" placeholder="e.g. Commercial Roofing, Logistics..." required />
+              </div>
             </div>
 
-            <button type="submit" class="btn-primary magnetic" style="margin-top: 1rem; width: 100%; justify-content: center; padding: 1.2rem;">
-              Send Message
+            <div class="form-group">
+              <label for="message">What bottleneck are you trying to automate?</label>
+              <textarea id="message" class="form-control" placeholder="Please provide specific details about the software you use (e.g., ServiceTitan, SAP, legacy AS400) and the manual processes your team is currently stuck doing..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary magnetic" style="width: 100%; justify-content: center; padding: 1.25rem; font-size: 1.1rem; margin-top: 1rem;">
+              Submit Inquiry
               <span class="btn-icon">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 13L13 1M13 1H3M13 1v10"/></svg>
               </span>
             </button>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1.5rem;">
+              We typically review and respond to technical scoping inquiries within 24 business hours. No spam, ever.
+            </p>
           </form>
-
         </div>
       </div>
-      
-    </div>
-  </section>
-</main>
-<footer class="footer">
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -139,8 +196,8 @@
         <div class="footer-col">
           <h4>Company</h4>
           <a href="why-us.html">About</a>
-          <a href="index.html#process">Process</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="process.html">Process</a>
+          <a href="contact.html">Custom Inquiries</a>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
