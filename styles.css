@@ -238,7 +238,7 @@ section {
   transition: all 400ms var(--ease-out-expo);
   white-space: nowrap;
 }
-.btn-primary:hover { filter: brightness(1.1); }
+.btn-primary:hover { filter: brightness(1.1); transform: translateY(-2px); box-shadow: 0 4px 16px var(--accent-glow); }
 .btn-primary:active { transform: scale(0.98); }
 .btn-primary .btn-icon {
   display: flex;

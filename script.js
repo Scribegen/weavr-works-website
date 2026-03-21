@@ -83,33 +83,7 @@
   });
 
 
-  /* ── Magnetic Button Hover ────────────────────── */
-  const magneticBtns = document.querySelectorAll('.magnetic');
-
-  magneticBtns.forEach((btn) => {
-    let raf;
-
-    btn.addEventListener('mousemove', (e) => {
-      if (raf) cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-      });
-    });
-
-    btn.addEventListener('mouseleave', () => {
-      if (raf) cancelAnimationFrame(raf);
-      btn.style.transform = 'translate(0, 0)';
-      btn.style.transition = 'transform 600ms cubic-bezier(0.32, 0.72, 0, 1)';
-      setTimeout(() => { btn.style.transition = ''; }, 600);
-    });
-
-    btn.addEventListener('mouseenter', () => {
-      btn.style.transition = 'none';
-    });
-  });
+  /* ── Magnetic Button Hover (Removed per user request) ── */
 
 
   // Text scramble removed per user request
