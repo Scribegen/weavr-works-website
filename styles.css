@@ -273,6 +273,21 @@ section {
   border-color: rgba(255,255,255,0.2);
 }
 .btn-secondary:active { transform: scale(0.98); }
+
+/* Custom Bundle Button */
+.btn-bundle {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--text-primary);
+}
+.btn-bundle:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+
 .w-full { width: 100%; }
 
 /* Hamburger (mobile) */
