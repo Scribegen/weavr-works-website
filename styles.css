@@ -211,6 +211,16 @@ section {
   color: var(--text-primary);
 }
 
+/* Invisible bridge to prevent hover loss when moving mouse down */
+.nav-dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  height: 25px;
+}
+
 /* Button-in-Button CTA pattern */
 .btn-primary {
   display: inline-flex;
