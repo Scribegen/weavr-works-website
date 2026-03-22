@@ -202,25 +202,25 @@
     <div class="container">
       <div style="text-align: center; margin-bottom: 4rem;">
         <span class="eyebrow reveal">The Tiered Bundle Play</span>
-        <h2 class="reveal" data-delay="1" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">The smartest move is to package all three together:</h2>
+        <h2 class="reveal" data-delay="1" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">The smartest move is to choose a bundle:</h2>
       </div>
 
-      <div class="pricing-grid">
-        <!-- Starter Section -->
-        <article class="pricing-card reveal" data-delay="1">
-          <div class="pricing-card-inner">
-            <h3 class="pricing-tier" style="margin: 0 0 1rem 0;">Starter</h3>
-            <div class="pricing-price" style="margin-bottom: 0.5rem;">
-              <span class="currency">$</span>500<span class="period">/mo</span>
-            </div>
-            <p style="visibility: hidden; margin-top: 0; margin-bottom: 1rem; font-weight: 600;">Save</p>
-            <ul class="pricing-features" style="margin-top: 1.5rem;">
-              <li>Receptionist only</li>
-            </ul>
-             <a href="https://cal.com/weavrworks/30min" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full" style="justify-content:center;">Get Started</a>
-          </div>
-        </article>
+      <style>
+        .bundle-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr) !important;
+          max-width: 900px;
+          margin: 0 auto;
+          gap: 2rem;
+        }
+        @media (max-width: 768px) {
+          .bundle-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      </style>
 
+      <div class="pricing-grid bundle-grid">
         <!-- Growth Section -->
         <article class="pricing-card popular reveal" data-delay="2">
           <div class="pricing-card-inner">
