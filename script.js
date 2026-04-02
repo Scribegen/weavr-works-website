@@ -209,4 +209,83 @@
     onScroll();
   }
 
+  /* ── Blog Pagination ────────────────────────────── */
+  const currentPath = window.location.pathname;
+  if (currentPath.includes('blog.html') || currentPath.endsWith('blog')) {
+    const blogArticles = document.querySelectorAll('main .container article.service-card');
+    if (blogArticles.length > 0) {
+      const perPage = 6;
+      let currentPage = 1;
+      const totalPages = Math.ceil(blogArticles.length / perPage);
+
+      const renderPage = (page) => {
+        currentPage = page;
+        blogArticles.forEach((article, index) => {
+          if (index >= (page - 1) * perPage && index < page * perPage) {
+            article.style.display = 'flex';
+            setTimeout(() => article.classList.add('visible'), 50);
+          } else {
+            article.style.display = 'none';
+          }
+        });
+
+        renderControls();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      const renderControls = () => {
+        let controlsDiv = document.getElementById('pagination-controls');
+        if (!controlsDiv) {
+          controlsDiv = document.createElement('div');
+          controlsDiv.id = 'pagination-controls';
+          controlsDiv.style.display = 'flex';
+          controlsDiv.style.justifyContent = 'center';
+          controlsDiv.style.gap = '0.5rem';
+          controlsDiv.style.marginTop = '4rem';
+          controlsDiv.style.alignItems = 'center';
+          const gridParent = blogArticles[0].parentElement;
+          gridParent.insertAdjacentElement('afterend', controlsDiv);
+        }
+        
+        controlsDiv.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        const createBtn = (text, pageNum, disabled) => {
+          const btn = document.createElement('button');
+          btn.textContent = text;
+          btn.style.padding = '0.5rem 1rem';
+          btn.style.borderRadius = 'var(--radius-pill)';
+          btn.style.border = '1px solid var(--border-accent)';
+          btn.style.background = pageNum === currentPage ? 'var(--accent)' : 'transparent';
+          btn.style.color = pageNum === currentPage ? '#000' : 'var(--text-primary)';
+          btn.style.cursor = disabled ? 'not-allowed' : 'pointer';
+          btn.style.opacity = disabled ? '0.5' : '1';
+          btn.style.fontWeight = 'bold';
+          btn.style.fontFamily = 'var(--font-mono)';
+          btn.style.transition = 'all 0.3s';
+          
+          if (!disabled && pageNum !== currentPage) {
+            btn.onmouseover = () => btn.style.background = 'rgba(16,185,129,0.1)';
+            btn.onmouseleave = () => btn.style.background = 'transparent';
+          }
+
+          if (!disabled) {
+            btn.addEventListener('click', () => {
+              renderPage(pageNum);
+            });
+          }
+          controlsDiv.appendChild(btn);
+        };
+
+        createBtn('Prev', currentPage - 1, currentPage === 1);
+        for (let i = 1; i <= totalPages; i++) {
+          createBtn(i, i, false);
+        }
+        createBtn('Next', currentPage + 1, currentPage === totalPages);
+      };
+
+      renderPage(1);
+    }
+  }
+
 })();
